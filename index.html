@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SquidAgent: Parallelize Wisely, Coordinate Efficiently — Demo</title>
+<meta name="description" content="Explore SquidAgent alongside seven baselines across nine code generation, technical writing, and planning benchmarks.">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#benchmarks">Skip to benchmark comparisons</a>
+<header id="top">
+  <h1>SquidAgent</h1>
+  <p>Parallelize Wisely, Coordinate Efficiently</p>
+</header>
+<div id="benchmarks"></div>
+<nav class="benchmark-nav" aria-label="Choose a benchmark">
+  <a href="#PixelCraft" data-benchmark="PixelCraft">PixelCraft</a>
+  <a href="#ShopFlow" data-benchmark="ShopFlow">ShopFlow</a>
+  <a href="#CompressKit" data-benchmark="CompressKit">CompressKit</a>
+  <a href="#ArcadeBox" data-benchmark="ArcadeBox">ArcadeBox</a>
+  <a href="#SlideKit" data-benchmark="SlideKit">SlideKit</a>
+  <a href="#ClimateAnalysis" data-benchmark="ClimateAnalysis">ClimateAnalysis</a>
+  <a href="#LinAlgBook" data-benchmark="LinAlgBook">LinAlgBook</a>
+  <a href="#MathRef" data-benchmark="MathRef">MathRef</a>
+  <a href="#CloudDocs" data-benchmark="CloudDocs">CloudDocs</a>
+</nav>
+<p class="notice">Entries marked <span class="tag-modified">†</span> required minor fixes via Claude Code for demonstration. Paper scores reflect the original, unmodified outputs. Click a preview to enlarge.</p>
+<main id="gallery">
+
+
+<!-- 1. PixelCraft (MC) -->
+<section class="box" id="PixelCraft" aria-labelledby="heading-PixelCraft">
+  <h2 id="heading-PixelCraft">PixelCraft</h2>
+  <div class="description-box">
+    <p>Build a 2D pixel survival game inspired by Minecraft using Python and Pygame.</p>
+    <ul>
+      <li>Procedurally generated open world (at least 256x256 blocks) with multiple biomes</li>
+      <li>At least 15 block types, mining with progress animation, block placement</li>
+      <li>36-slot inventory, 3x3 crafting grid with 15+ recipes</li>
+      <li>At least 3 enemy types, day-night cycle, save/load system</li>
+    </ul>
+  </div>
+    <div class="image-row">
+    <figure class="image-item ours"><figcaption class="caption"><strong>SquidAgent</strong> <span class="ours-tag">Ours</span></figcaption><a class="preview-link" href="assets/gifs/ours/Pixel.gif" data-title="PixelCraft · SquidAgent" aria-label="Enlarge SquidAgent output for PixelCraft"><img src="assets/gifs/ours/Pixel.gif" class="cover" alt="SquidAgent output for PixelCraft" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Claude Code</strong></figcaption><a class="preview-link" href="assets/gifs/claudecode/Pixel.gif" data-title="PixelCraft · Claude Code" aria-label="Enlarge Claude Code output for PixelCraft"><img src="assets/gifs/claudecode/Pixel.gif" class="cover" alt="Claude Code output for PixelCraft" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>SeqCV</strong></figcaption><a class="preview-link" href="assets/gifs/seqcv/Pixel.gif" data-title="PixelCraft · SeqCV" aria-label="Enlarge SeqCV output for PixelCraft"><img src="assets/gifs/seqcv/Pixel.gif" class="cover" alt="SeqCV output for PixelCraft" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MetaGPT</strong></figcaption><a class="preview-link" href="assets/gifs/metagpt/Pixel.gif" data-title="PixelCraft · MetaGPT" aria-label="Enlarge MetaGPT output for PixelCraft"><img src="assets/gifs/metagpt/Pixel.gif" class="cover" alt="MetaGPT output for PixelCraft" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AFlow</strong></figcaption><a class="preview-link" href="assets/gifs/aflow/Pixel.gif" data-title="PixelCraft · AFlow" aria-label="Enlarge AFlow output for PixelCraft"><img src="assets/gifs/aflow/Pixel.gif" class="cover" alt="AFlow output for PixelCraft" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Flow</strong> <span class="tag-modified">&dagger;</span></figcaption><a class="preview-link" href="assets/gifs/flow/Pixel.gif" data-title="PixelCraft · Flow" aria-label="Enlarge Flow output for PixelCraft"><img src="assets/gifs/flow/Pixel.gif" class="cover" alt="Flow output for PixelCraft" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MacNet</strong></figcaption><a class="preview-link" href="assets/gifs/macnet/Pixel.gif" data-title="PixelCraft · MacNet" aria-label="Enlarge MacNet output for PixelCraft"><img src="assets/gifs/macnet/Pixel.gif" class="cover" alt="MacNet output for PixelCraft" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AgentConductor</strong></figcaption><a class="preview-link" href="assets/gifs/agentconductor/Pixel.gif" data-title="PixelCraft · AgentConductor" aria-label="Enlarge AgentConductor output for PixelCraft"><img src="assets/gifs/agentconductor/Pixel.gif" class="cover" alt="AgentConductor output for PixelCraft" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+  </div>
+</section>
+
+<!-- 2. ShopFlow (EC) -->
+<section class="box" id="ShopFlow" aria-labelledby="heading-ShopFlow">
+  <h2 id="heading-ShopFlow">ShopFlow</h2>
+  <div class="description-box">
+    <p>Build a full-stack e-commerce platform with a Python backend and web frontend.</p>
+    <ul>
+      <li>Product catalog, shopping cart, order management</li>
+      <li>User authentication, admin dashboard with analytics</li>
+      <li>Search, filtering, pagination, responsive design</li>
+    </ul>
+  </div>
+    <div class="image-row">
+    <figure class="image-item ours"><figcaption class="caption"><strong>SquidAgent</strong> <span class="ours-tag">Ours</span></figcaption><a class="preview-link" href="assets/gifs/ours/Shop.gif" data-title="ShopFlow · SquidAgent" aria-label="Enlarge SquidAgent output for ShopFlow"><img src="assets/gifs/ours/Shop.gif" class="cover" alt="SquidAgent output for ShopFlow" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Claude Code</strong></figcaption><a class="preview-link" href="assets/gifs/claudecode/Shop.gif" data-title="ShopFlow · Claude Code" aria-label="Enlarge Claude Code output for ShopFlow"><img src="assets/gifs/claudecode/Shop.gif" class="cover" alt="Claude Code output for ShopFlow" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>SeqCV</strong></figcaption><a class="preview-link" href="assets/gifs/seqcv/Shop.gif" data-title="ShopFlow · SeqCV" aria-label="Enlarge SeqCV output for ShopFlow"><img src="assets/gifs/seqcv/Shop.gif" class="cover" alt="SeqCV output for ShopFlow" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MetaGPT</strong></figcaption><a class="preview-link" href="assets/gifs/metagpt/Shop.gif" data-title="ShopFlow · MetaGPT" aria-label="Enlarge MetaGPT output for ShopFlow"><img src="assets/gifs/metagpt/Shop.gif" class="cover" alt="MetaGPT output for ShopFlow" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AFlow</strong></figcaption><a class="preview-link" href="assets/gifs/aflow/Shop.gif" data-title="ShopFlow · AFlow" aria-label="Enlarge AFlow output for ShopFlow"><img src="assets/gifs/aflow/Shop.gif" class="cover" alt="AFlow output for ShopFlow" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Flow</strong> <span class="tag-modified">&dagger;</span></figcaption><a class="preview-link" href="assets/gifs/flow/Shop.gif" data-title="ShopFlow · Flow" aria-label="Enlarge Flow output for ShopFlow"><img src="assets/gifs/flow/Shop.gif" class="cover" alt="Flow output for ShopFlow" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MacNet</strong> <span class="tag-modified">&dagger;</span></figcaption><a class="preview-link" href="assets/gifs/macnet/Shop.gif" data-title="ShopFlow · MacNet" aria-label="Enlarge MacNet output for ShopFlow"><img src="assets/gifs/macnet/Shop.gif" class="cover" alt="MacNet output for ShopFlow" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AgentConductor</strong></figcaption><a class="preview-link" href="assets/gifs/agentconductor/Shop.gif" data-title="ShopFlow · AgentConductor" aria-label="Enlarge AgentConductor output for ShopFlow"><img src="assets/gifs/agentconductor/Shop.gif" class="cover" alt="AgentConductor output for ShopFlow" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+  </div>
+</section>
+
+<!-- 3. CompressKit (CP) -->
+<section class="box" id="CompressKit" aria-labelledby="heading-CompressKit">
+  <h2 id="heading-CompressKit">CompressKit</h2>
+  <div class="description-box">
+    <p>Build a multi-algorithm file compression toolkit in Python.</p>
+    <ul>
+      <li>Implement Huffman, LZW, RLE, BWT, arithmetic coding from scratch</li>
+      <li>Archive format bundling multiple files, CLI interface</li>
+      <li>Benchmarking suite comparing algorithms on speed and ratio</li>
+    </ul>
+  </div>
+    <div class="image-row">
+    <figure class="image-item ours"><figcaption class="caption"><strong>SquidAgent</strong> <span class="ours-tag">Ours</span></figcaption><a class="preview-link" href="assets/gifs/ours/Comp.gif" data-title="CompressKit · SquidAgent" aria-label="Enlarge SquidAgent output for CompressKit"><img src="assets/gifs/ours/Comp.gif" class="cover" alt="SquidAgent output for CompressKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Claude Code</strong></figcaption><a class="preview-link" href="assets/gifs/claudecode/Comp.gif" data-title="CompressKit · Claude Code" aria-label="Enlarge Claude Code output for CompressKit"><img src="assets/gifs/claudecode/Comp.gif" class="cover" alt="Claude Code output for CompressKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>SeqCV</strong></figcaption><a class="preview-link" href="assets/gifs/seqcv/Comp.gif" data-title="CompressKit · SeqCV" aria-label="Enlarge SeqCV output for CompressKit"><img src="assets/gifs/seqcv/Comp.gif" class="cover" alt="SeqCV output for CompressKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MetaGPT</strong></figcaption><a class="preview-link" href="assets/gifs/metagpt/Comp.gif" data-title="CompressKit · MetaGPT" aria-label="Enlarge MetaGPT output for CompressKit"><img src="assets/gifs/metagpt/Comp.gif" class="cover" alt="MetaGPT output for CompressKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AFlow</strong></figcaption><a class="preview-link" href="assets/gifs/aflow/Comp.gif" data-title="CompressKit · AFlow" aria-label="Enlarge AFlow output for CompressKit"><img src="assets/gifs/aflow/Comp.gif" class="cover" alt="AFlow output for CompressKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Flow</strong></figcaption><a class="preview-link" href="assets/gifs/flow/Comp.gif" data-title="CompressKit · Flow" aria-label="Enlarge Flow output for CompressKit"><img src="assets/gifs/flow/Comp.gif" class="cover" alt="Flow output for CompressKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MacNet</strong> <span class="tag-modified">&dagger;</span></figcaption><a class="preview-link" href="assets/gifs/macnet/Comp.gif" data-title="CompressKit · MacNet" aria-label="Enlarge MacNet output for CompressKit"><img src="assets/gifs/macnet/Comp.gif" class="cover" alt="MacNet output for CompressKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AgentConductor</strong> <span class="tag-modified">&dagger;</span></figcaption><a class="preview-link" href="assets/gifs/agentconductor/Comp.gif" data-title="CompressKit · AgentConductor" aria-label="Enlarge AgentConductor output for CompressKit"><img src="assets/gifs/agentconductor/Comp.gif" class="cover" alt="AgentConductor output for CompressKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+  </div>
+</section>
+
+<!-- 4. ArcadeBox (GA) -->
+<section class="box" id="ArcadeBox" aria-labelledby="heading-ArcadeBox">
+  <h2 id="heading-ArcadeBox">ArcadeBox</h2>
+  <div class="description-box">
+    <p>Build a browser-based game arcade with 8 playable games.</p>
+    <ul>
+      <li>Main menu screen, each game runs in HTML5 Canvas</li>
+      <li>8 games: Tetris, Snake, Minesweeper, 2048, Breakout, Sudoku, Memory Match, Gomoku</li>
+      <li>Persistent high score system (localStorage), global statistics</li>
+    </ul>
+  </div>
+    <div class="image-row">
+    <figure class="image-item ours"><figcaption class="caption"><strong>SquidAgent</strong> <span class="ours-tag">Ours</span></figcaption><a class="preview-link" href="assets/gifs/ours/Arcade.gif" data-title="ArcadeBox · SquidAgent" aria-label="Enlarge SquidAgent output for ArcadeBox"><img src="assets/gifs/ours/Arcade.gif" class="cover" alt="SquidAgent output for ArcadeBox" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Claude Code</strong></figcaption><a class="preview-link" href="assets/gifs/claudecode/Arcade.gif" data-title="ArcadeBox · Claude Code" aria-label="Enlarge Claude Code output for ArcadeBox"><img src="assets/gifs/claudecode/Arcade.gif" class="cover" alt="Claude Code output for ArcadeBox" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>SeqCV</strong></figcaption><a class="preview-link" href="assets/gifs/seqcv/Arcade.gif" data-title="ArcadeBox · SeqCV" aria-label="Enlarge SeqCV output for ArcadeBox"><img src="assets/gifs/seqcv/Arcade.gif" class="cover" alt="SeqCV output for ArcadeBox" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MetaGPT</strong></figcaption><a class="preview-link" href="assets/gifs/metagpt/Arcade.gif" data-title="ArcadeBox · MetaGPT" aria-label="Enlarge MetaGPT output for ArcadeBox"><img src="assets/gifs/metagpt/Arcade.gif" class="cover" alt="MetaGPT output for ArcadeBox" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AFlow</strong></figcaption><a class="preview-link" href="assets/gifs/aflow/Arcade.gif" data-title="ArcadeBox · AFlow" aria-label="Enlarge AFlow output for ArcadeBox"><img src="assets/gifs/aflow/Arcade.gif" class="cover" alt="AFlow output for ArcadeBox" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Flow</strong> <span class="tag-modified">&dagger;</span></figcaption><a class="preview-link" href="assets/gifs/flow/Arcade.gif" data-title="ArcadeBox · Flow" aria-label="Enlarge Flow output for ArcadeBox"><img src="assets/gifs/flow/Arcade.gif" class="cover" alt="Flow output for ArcadeBox" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MacNet</strong></figcaption><a class="preview-link" href="assets/gifs/macnet/Arcade.gif" data-title="ArcadeBox · MacNet" aria-label="Enlarge MacNet output for ArcadeBox"><img src="assets/gifs/macnet/Arcade.gif" class="cover" alt="MacNet output for ArcadeBox" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AgentConductor</strong></figcaption><a class="preview-link" href="assets/gifs/agentconductor/Arcade.gif" data-title="ArcadeBox · AgentConductor" aria-label="Enlarge AgentConductor output for ArcadeBox"><img src="assets/gifs/agentconductor/Arcade.gif" class="cover" alt="AgentConductor output for ArcadeBox" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+  </div>
+</section>
+
+<!-- 5. SlideKit (PS) -->
+<section class="box" id="SlideKit" aria-labelledby="heading-SlideKit">
+  <h2 id="heading-SlideKit">SlideKit</h2>
+  <div class="description-box">
+    <p>Create a complete set of HTML slide presentations for a 3-day machine learning workshop.</p>
+    <ul>
+      <li>9 standalone HTML slide decks (20-30 slides each) with CSS + JS navigation</li>
+      <li>Topics: ML foundations, linear models, trees, neural networks, practical ML</li>
+      <li>LaTeX-rendered equations, speaker notes, cross-references, SVG diagrams</li>
+    </ul>
+  </div>
+    <div class="image-row">
+    <figure class="image-item ours"><figcaption class="caption"><strong>SquidAgent</strong> <span class="ours-tag">Ours</span></figcaption><a class="preview-link" href="assets/gifs/ours/Slide.gif" data-title="SlideKit · SquidAgent" aria-label="Enlarge SquidAgent output for SlideKit"><img src="assets/gifs/ours/Slide.gif" class="cover" alt="SquidAgent output for SlideKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Claude Code</strong></figcaption><a class="preview-link" href="assets/gifs/claudecode/Slide.gif" data-title="SlideKit · Claude Code" aria-label="Enlarge Claude Code output for SlideKit"><img src="assets/gifs/claudecode/Slide.gif" class="cover" alt="Claude Code output for SlideKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>SeqCV</strong></figcaption><a class="preview-link" href="assets/gifs/seqcv/Slide.gif" data-title="SlideKit · SeqCV" aria-label="Enlarge SeqCV output for SlideKit"><img src="assets/gifs/seqcv/Slide.gif" class="cover" alt="SeqCV output for SlideKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MetaGPT</strong></figcaption><a class="preview-link" href="assets/gifs/metagpt/Slide.gif" data-title="SlideKit · MetaGPT" aria-label="Enlarge MetaGPT output for SlideKit"><img src="assets/gifs/metagpt/Slide.gif" class="cover" alt="MetaGPT output for SlideKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AFlow</strong></figcaption><a class="preview-link" href="assets/gifs/aflow/Slide.gif" data-title="SlideKit · AFlow" aria-label="Enlarge AFlow output for SlideKit"><img src="assets/gifs/aflow/Slide.gif" class="cover" alt="AFlow output for SlideKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Flow</strong></figcaption><a class="preview-link" href="assets/gifs/flow/Slide.gif" data-title="SlideKit · Flow" aria-label="Enlarge Flow output for SlideKit"><img src="assets/gifs/flow/Slide.gif" class="cover" alt="Flow output for SlideKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MacNet</strong></figcaption><a class="preview-link" href="assets/gifs/macnet/Slide.gif" data-title="SlideKit · MacNet" aria-label="Enlarge MacNet output for SlideKit"><img src="assets/gifs/macnet/Slide.gif" class="cover" alt="MacNet output for SlideKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AgentConductor</strong></figcaption><a class="preview-link" href="assets/gifs/agentconductor/Slide.gif" data-title="SlideKit · AgentConductor" aria-label="Enlarge AgentConductor output for SlideKit"><img src="assets/gifs/agentconductor/Slide.gif" class="cover" alt="AgentConductor output for SlideKit" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+  </div>
+</section>
+
+<!-- 6. ClimateAnalysis (DA) -->
+<section class="box" id="ClimateAnalysis" aria-labelledby="heading-ClimateAnalysis">
+  <h2 id="heading-ClimateAnalysis">ClimateAnalysis</h2>
+  <div class="description-box">
+    <p>Create a complete data analysis project investigating global climate trends.</p>
+    <ul>
+      <li>5 Python analysis scripts (temperature, precipitation, CO2, extreme events, regional)</li>
+      <li>3 Markdown summary reports with cross-references</li>
+      <li>Pure Python — no pandas/numpy, all statistics from scratch</li>
+    </ul>
+  </div>
+    <div class="image-row">
+    <figure class="image-item ours"><figcaption class="caption"><strong>SquidAgent</strong> <span class="ours-tag">Ours</span></figcaption><a class="preview-link" href="assets/gifs/ours/Climate.gif" data-title="ClimateAnalysis · SquidAgent" aria-label="Enlarge SquidAgent output for ClimateAnalysis"><img src="assets/gifs/ours/Climate.gif" class="cover" alt="SquidAgent output for ClimateAnalysis" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Claude Code</strong></figcaption><a class="preview-link" href="assets/gifs/claudecode/Climate.gif" data-title="ClimateAnalysis · Claude Code" aria-label="Enlarge Claude Code output for ClimateAnalysis"><img src="assets/gifs/claudecode/Climate.gif" class="cover" alt="Claude Code output for ClimateAnalysis" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>SeqCV</strong></figcaption><a class="preview-link" href="assets/gifs/seqcv/Climate.gif" data-title="ClimateAnalysis · SeqCV" aria-label="Enlarge SeqCV output for ClimateAnalysis"><img src="assets/gifs/seqcv/Climate.gif" class="cover" alt="SeqCV output for ClimateAnalysis" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MetaGPT</strong></figcaption><a class="preview-link" href="assets/gifs/metagpt/Climate.gif" data-title="ClimateAnalysis · MetaGPT" aria-label="Enlarge MetaGPT output for ClimateAnalysis"><img src="assets/gifs/metagpt/Climate.gif" class="cover" alt="MetaGPT output for ClimateAnalysis" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AFlow</strong></figcaption><a class="preview-link" href="assets/gifs/aflow/Climate.gif" data-title="ClimateAnalysis · AFlow" aria-label="Enlarge AFlow output for ClimateAnalysis"><img src="assets/gifs/aflow/Climate.gif" class="cover" alt="AFlow output for ClimateAnalysis" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Flow</strong></figcaption><a class="preview-link" href="assets/gifs/flow/Climate.gif" data-title="ClimateAnalysis · Flow" aria-label="Enlarge Flow output for ClimateAnalysis"><img src="assets/gifs/flow/Climate.gif" class="cover" alt="Flow output for ClimateAnalysis" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MacNet</strong></figcaption><a class="preview-link" href="assets/gifs/macnet/Climate.gif" data-title="ClimateAnalysis · MacNet" aria-label="Enlarge MacNet output for ClimateAnalysis"><img src="assets/gifs/macnet/Climate.gif" class="cover" alt="MacNet output for ClimateAnalysis" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AgentConductor</strong></figcaption><a class="preview-link" href="assets/gifs/agentconductor/Climate.gif" data-title="ClimateAnalysis · AgentConductor" aria-label="Enlarge AgentConductor output for ClimateAnalysis"><img src="assets/gifs/agentconductor/Climate.gif" class="cover" alt="AgentConductor output for ClimateAnalysis" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+  </div>
+</section>
+
+<!-- 7. LinAlgBook (LA) -->
+<section class="box" id="LinAlgBook" aria-labelledby="heading-LinAlgBook">
+  <h2 id="heading-LinAlgBook">LinAlgBook</h2>
+  <div class="description-box">
+    <p>Write a beginner-friendly linear algebra tutorial for first-year undergraduates.</p>
+    <ul>
+      <li>6 markdown files: vectors, matrix ops, determinants, eigenvalues, SVD, PCA</li>
+      <li>800-1200 words each, 2+ LaTeX worked examples per chapter</li>
+      <li>Consistent notation and terminology across all chapters</li>
+    </ul>
+  </div>
+    <div class="image-row">
+    <figure class="image-item ours"><figcaption class="caption"><strong>SquidAgent</strong> <span class="ours-tag">Ours</span></figcaption><a class="preview-link" href="assets/gifs/ours/LinAlg.gif" data-title="LinAlgBook · SquidAgent" aria-label="Enlarge SquidAgent output for LinAlgBook"><img src="assets/gifs/ours/LinAlg.gif" class="cover" alt="SquidAgent output for LinAlgBook" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Claude Code</strong></figcaption><a class="preview-link" href="assets/gifs/claudecode/LinAlg.gif" data-title="LinAlgBook · Claude Code" aria-label="Enlarge Claude Code output for LinAlgBook"><img src="assets/gifs/claudecode/LinAlg.gif" class="cover" alt="Claude Code output for LinAlgBook" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>SeqCV</strong></figcaption><a class="preview-link" href="assets/gifs/seqcv/LinAlg.gif" data-title="LinAlgBook · SeqCV" aria-label="Enlarge SeqCV output for LinAlgBook"><img src="assets/gifs/seqcv/LinAlg.gif" class="cover" alt="SeqCV output for LinAlgBook" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MetaGPT</strong></figcaption><a class="preview-link" href="assets/gifs/metagpt/LinAlg.gif" data-title="LinAlgBook · MetaGPT" aria-label="Enlarge MetaGPT output for LinAlgBook"><img src="assets/gifs/metagpt/LinAlg.gif" class="cover" alt="MetaGPT output for LinAlgBook" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AFlow</strong></figcaption><a class="preview-link" href="assets/gifs/aflow/LinAlg.gif" data-title="LinAlgBook · AFlow" aria-label="Enlarge AFlow output for LinAlgBook"><img src="assets/gifs/aflow/LinAlg.gif" class="cover" alt="AFlow output for LinAlgBook" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Flow</strong></figcaption><a class="preview-link" href="assets/gifs/flow/LinAlg.gif" data-title="LinAlgBook · Flow" aria-label="Enlarge Flow output for LinAlgBook"><img src="assets/gifs/flow/LinAlg.gif" class="cover" alt="Flow output for LinAlgBook" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MacNet</strong></figcaption><a class="preview-link" href="assets/gifs/macnet/LinAlg.gif" data-title="LinAlgBook · MacNet" aria-label="Enlarge MacNet output for LinAlgBook"><img src="assets/gifs/macnet/LinAlg.gif" class="cover" alt="MacNet output for LinAlgBook" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AgentConductor</strong></figcaption><a class="preview-link" href="assets/gifs/agentconductor/LinAlg.gif" data-title="LinAlgBook · AgentConductor" aria-label="Enlarge AgentConductor output for LinAlgBook"><img src="assets/gifs/agentconductor/LinAlg.gif" class="cover" alt="AgentConductor output for LinAlgBook" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+  </div>
+</section>
+
+<!-- 8. MathRef (MB) -->
+<section class="box" id="MathRef" aria-labelledby="heading-MathRef">
+  <h2 id="heading-MathRef">MathRef</h2>
+  <div class="description-box">
+    <p>Write a comprehensive discrete mathematics textbook for undergraduates.</p>
+    <ul>
+      <li>6 chapters: logic, set theory, relations, functions, combinatorics, graph theory</li>
+      <li>3000-4000 words each, 5+ fully worked LaTeX proofs per chapter</li>
+      <li>4 appendices: symbol table, proof techniques, theorem index, cross-reference</li>
+    </ul>
+  </div>
+    <div class="image-row">
+    <figure class="image-item ours"><figcaption class="caption"><strong>SquidAgent</strong> <span class="ours-tag">Ours</span></figcaption><a class="preview-link" href="assets/gifs/ours/Math.gif" data-title="MathRef · SquidAgent" aria-label="Enlarge SquidAgent output for MathRef"><img src="assets/gifs/ours/Math.gif" class="cover" alt="SquidAgent output for MathRef" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Claude Code</strong></figcaption><a class="preview-link" href="assets/gifs/claudecode/Math.gif" data-title="MathRef · Claude Code" aria-label="Enlarge Claude Code output for MathRef"><img src="assets/gifs/claudecode/Math.gif" class="cover" alt="Claude Code output for MathRef" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>SeqCV</strong></figcaption><a class="preview-link" href="assets/gifs/seqcv/Math.gif" data-title="MathRef · SeqCV" aria-label="Enlarge SeqCV output for MathRef"><img src="assets/gifs/seqcv/Math.gif" class="cover" alt="SeqCV output for MathRef" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MetaGPT</strong></figcaption><a class="preview-link" href="assets/gifs/metagpt/Math.gif" data-title="MathRef · MetaGPT" aria-label="Enlarge MetaGPT output for MathRef"><img src="assets/gifs/metagpt/Math.gif" class="cover" alt="MetaGPT output for MathRef" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AFlow</strong></figcaption><a class="preview-link" href="assets/gifs/aflow/Math.gif" data-title="MathRef · AFlow" aria-label="Enlarge AFlow output for MathRef"><img src="assets/gifs/aflow/Math.gif" class="cover" alt="AFlow output for MathRef" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Flow</strong></figcaption><a class="preview-link" href="assets/gifs/flow/Math.gif" data-title="MathRef · Flow" aria-label="Enlarge Flow output for MathRef"><img src="assets/gifs/flow/Math.gif" class="cover" alt="Flow output for MathRef" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MacNet</strong></figcaption><a class="preview-link" href="assets/gifs/macnet/Math.gif" data-title="MathRef · MacNet" aria-label="Enlarge MacNet output for MathRef"><img src="assets/gifs/macnet/Math.gif" class="cover" alt="MacNet output for MathRef" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AgentConductor</strong></figcaption><a class="preview-link" href="assets/gifs/agentconductor/Math.gif" data-title="MathRef · AgentConductor" aria-label="Enlarge AgentConductor output for MathRef"><img src="assets/gifs/agentconductor/Math.gif" class="cover" alt="AgentConductor output for MathRef" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+  </div>
+</section>
+
+<!-- 9. CloudDocs (AD) -->
+<section class="box" id="CloudDocs" aria-labelledby="heading-CloudDocs">
+  <h2 id="heading-CloudDocs">CloudDocs</h2>
+  <div class="description-box">
+    <p>Write complete API documentation for a fictional cloud storage service "CloudVault".</p>
+    <ul>
+      <li>8 markdown files: auth, files, sharing, search, webhooks, SDK, errors, quickstart</li>
+      <li>15+ endpoints per module with curl/Python examples</li>
+      <li>Consistent notation, error codes, cross-references</li>
+    </ul>
+  </div>
+    <div class="image-row">
+    <figure class="image-item ours"><figcaption class="caption"><strong>SquidAgent</strong> <span class="ours-tag">Ours</span></figcaption><a class="preview-link" href="assets/gifs/ours/Cloud.gif" data-title="CloudDocs · SquidAgent" aria-label="Enlarge SquidAgent output for CloudDocs"><img src="assets/gifs/ours/Cloud.gif" class="cover" alt="SquidAgent output for CloudDocs" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Claude Code</strong></figcaption><a class="preview-link" href="assets/gifs/claudecode/Cloud.gif" data-title="CloudDocs · Claude Code" aria-label="Enlarge Claude Code output for CloudDocs"><img src="assets/gifs/claudecode/Cloud.gif" class="cover" alt="Claude Code output for CloudDocs" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>SeqCV</strong></figcaption><a class="preview-link" href="assets/gifs/seqcv/Cloud.gif" data-title="CloudDocs · SeqCV" aria-label="Enlarge SeqCV output for CloudDocs"><img src="assets/gifs/seqcv/Cloud.gif" class="cover" alt="SeqCV output for CloudDocs" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MetaGPT</strong></figcaption><a class="preview-link" href="assets/gifs/metagpt/Cloud.gif" data-title="CloudDocs · MetaGPT" aria-label="Enlarge MetaGPT output for CloudDocs"><img src="assets/gifs/metagpt/Cloud.gif" class="cover" alt="MetaGPT output for CloudDocs" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AFlow</strong></figcaption><a class="preview-link" href="assets/gifs/aflow/Cloud.gif" data-title="CloudDocs · AFlow" aria-label="Enlarge AFlow output for CloudDocs"><img src="assets/gifs/aflow/Cloud.gif" class="cover" alt="AFlow output for CloudDocs" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>Flow</strong></figcaption><a class="preview-link" href="assets/gifs/flow/Cloud.gif" data-title="CloudDocs · Flow" aria-label="Enlarge Flow output for CloudDocs"><img src="assets/gifs/flow/Cloud.gif" class="cover" alt="Flow output for CloudDocs" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>MacNet</strong></figcaption><a class="preview-link" href="assets/gifs/macnet/Cloud.gif" data-title="CloudDocs · MacNet" aria-label="Enlarge MacNet output for CloudDocs"><img src="assets/gifs/macnet/Cloud.gif" class="cover" alt="MacNet output for CloudDocs" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+    <figure class="image-item"><figcaption class="caption"><strong>AgentConductor</strong></figcaption><a class="preview-link" href="assets/gifs/agentconductor/Cloud.gif" data-title="CloudDocs · AgentConductor" aria-label="Enlarge AgentConductor output for CloudDocs"><img src="assets/gifs/agentconductor/Cloud.gif" class="cover" alt="AgentConductor output for CloudDocs" loading="lazy" decoding="async"><span class="expand-label">View larger <span aria-hidden="true">↗</span></span></a></figure>
+  </div>
+</section>
+
+</main>
+
+<footer><a href="#top">Back to top ↑</a></footer>
+<dialog id="preview-dialog" aria-labelledby="preview-title"><div class="dialog-toolbar"><h2 id="preview-title">Output preview</h2><button type="button" id="close-preview" aria-label="Close preview">Close <span aria-hidden="true">×</span></button></div><div class="dialog-content"><img id="preview-image" alt=""></div><p class="dialog-hint">Animated output preview · Press Esc to close</p></dialog>
+<script src="app.js" defer></script>
+</body>
+</html>
